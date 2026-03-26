@@ -6,7 +6,7 @@ Although AnnotateImage can natively mark objects from PGC HYPERLEDA catalog, the
 
 For instance, in the image of NGC4565 below, only 8 PGC objects are revealed, although the image contains many more.
 
-![AnnotateImageDefault.png](Images\AnnotateImageDefault.png)
+![AnnotateImageDefault.png](Images/AnnotateImageDefault.png)
 
 If you want more objects to be displayed, you will have to extract the corresponding data from the HyperLeda database.
 
