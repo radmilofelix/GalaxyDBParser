@@ -1,6 +1,7 @@
 *.o
 *.exe
 
+_work
 Documents/
 ReleasesPublished/
 Sources/bin/
