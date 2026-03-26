@@ -5,7 +5,9 @@ AnnotateImage is a script in Pixinsight that marks and labels the astronomical o
 Although AnnotateImage can natively mark objects from PGC HYPERLEDA catalog, the number of PGC objects it displays is relatively low, probably limited to a certain magnitude value.
 
 For instance, in the image of NGC4565 below, only 8 PGC objects are revealed, although the image contains many more.
+
 ![AnnotateImageDefault.png](Images\AnnotateImageDefault.png)
+
 If you want more objects to be displayed, you will have to extract the corresponding data from the HyperLeda database.
 
 The GalaxyDBParser program in thes repo will select the galaxies from the data downloaded from HyperLeda and create a csv file that can be used as a custom catalog in the AnnotateImage script.
