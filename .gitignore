@@ -1,0 +1,6 @@
+*.o
+*.exe
+
+Documents/
+Sources/bin/
+Sources/obj/
