@@ -38,13 +38,42 @@ double parseDEC(std::string decStr)
 
 int main(int argc, char* argv[])
 {
+	std::string inputFile;
+	float diameter;
+	
     if (argc < 3 )
     {
-        std::cout << "Insufficient number of arguments, ending program." << std::endl;
-        return 1;
+        std::cout << "Insufficient number of arguments." << std::endl;
+        std::cout << "Do you want to continue? <y/n>." << std::endl;
+		char response;
+		response = std::cin.get();
+		if (response == 'y' || response == 'Y')
+		{
+			std::string userInput;
+			std::cout << "Input the path to the database file..." << std::endl;
+			std::cin >> userInput;
+			inputFile = userInput + '/';
+			std::cout << "Input the name of the database file..." << std::endl;
+			std::cin >> userInput;
+			inputFile += userInput;
+			std::cout << "Database file: " << inputFile << std::endl;
+
+			std::cout << "Input the diameter of the object circles: " << std::endl;
+			std::cin >> userInput;
+			diameter = atof( userInput.c_str() );
+		}
+		else
+		{
+			std::cout << "End program." << std::endl;
+			return 1;
+		}
     }
-    float diameter = atof(argv[2]);
-    std::string inputFile = argv[1];
+    else
+    {
+		inputFile = argv[1];
+		diameter = atof(argv[2]);
+	}
+
 //    std::string configFile = "columns.txt"; // Contains space-separated column indices (0-based)
     std::string outputFile = "galaxy_data.csv";
     char inDelim = ';';      // Delimiter used in the source database
@@ -62,10 +91,10 @@ int main(int argc, char* argv[])
 //    std::ifstream cfg(configFile);
 //    int idx;
 //    while (cfg >> idx) selectedCols.push_back(idx);
-
-    selectedCols.push_back(23);
-    selectedCols.push_back(6);
-
+	
+	selectedCols.push_back(23);
+	selectedCols.push_back(6);
+	
     std::ifstream in(inputFile);
     std::ofstream out(outputFile);
     std::string line;
@@ -101,11 +130,10 @@ int main(int argc, char* argv[])
         double dec = parseDEC(j2000.substr(splitPos));
 
         // Evaluate Flag (Column 3/Index 2)
+		// Process only raws of type G or g
         std::string flag = (row[2] == "G" || row[2] == "g") ? "1" : "0";
 
         // 4. Construct output row
-
-		// Process only raws of type G or g
 		if (flag == "1")
 		{
 			numRecords++;
@@ -117,7 +145,6 @@ int main(int argc, char* argv[])
 				if (i == (size_t)prefixColIdx) val = prefix + val; // Apply string prefix
 				out << val << outDelim;
 			}
-//			out << flag << "\n";
 			out << diameter << "\n";
 		}
     }
