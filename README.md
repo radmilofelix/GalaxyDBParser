@@ -1,4 +1,4 @@
-**Galaxies parser program using HyperLeda database.**
+# Galaxies parser program using HyperLeda database.
 **for PixInsight AnnotateImage script**
 
 AnnotateImage is a script in Pixinsight that marks and labels the astronomical objects that are present in an astrophotography, mainly DSOs (deep space objects), but also stars, asteroids and planets that may be in the image.
@@ -48,3 +48,5 @@ At the "**_Catalog path_**" property, click on the folder icon on the right, nav
 Click on **_"Preview_**" to visualise how will the image look and if everything is OK, click on the "**_OK_**" button.
 ![AnnotateImage.png](Images/AnnotateImage.png)
 The new PGC objects from the HyperLeda database are added in yellow colour.
+
+This program is based on the HyperLeda database:  http://leda.univ-lyon1.fr
