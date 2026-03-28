@@ -21,10 +21,10 @@ In the “**_Search radius_**” field input the desired radius (25 arcmin in ou
 
 In the next page, press on the “**_Advanced constraints_**” button.
 
-In the “HyperLeda compilations index” page, add the “PGC” column (select the checkbox) to have the PGC numbers in a separate column.
+In the “**_HyperLeda compilations index_**” page, add the “**_PGC_**” column (select the checkbox) to have the PGC numbers in a separate column.
 ![HL_Index_1.png](Images/HL_Index_1.png)
 
-At the bottom of the page, change “Output as” from “**_plain HTML_**” to **_CSV_**, change the “**_separator_**” to “**_other_**”, input “**;**” in the separator field and click on the “**_Save to file_**” button.
+At the bottom of the page, change “**_Output as_**” from “**_plain HTML_**” to **_CSV_**, change the “**_separator_**” to “**_other_**”, input “**;**” in the separator field and click on the “**_Save to file_**” button.
 ![HL_Index_2.png](Images/HL_Index_2.png)
 You will be asked to save a text file (**HyperLeda\_a000\_nnnnnnnnnn.txt**), this is the file having the objects in the database within the selected radius and around the selected position. The columns of the file are delimited with semicolons. Save the file.
 
