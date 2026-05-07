@@ -6,8 +6,6 @@
 #include <algorithm>
 #include <iomanip>
 
-//#define LINUX
-
 // Trims blank spaces from both ends of a string
 std::string trim(const std::string& s)
 {
@@ -72,11 +70,9 @@ int main(int argc, char* argv[])
 		else
 		{
 			std::cout << "End program." << std::endl;
-            #ifdef LINUX
-            system("read");
-            #else
-			system("pause");
-			#endif
+			std::cout << "Press ENTER to exit.";
+			std::cin.ignore();
+			std::cin.get();
 			return 1;
 		}
     }
@@ -168,10 +164,9 @@ int main(int argc, char* argv[])
     std::cout << "Circle diameter: " << diameter << std::endl;
     if ( magnitude < 999 )
         std::cout << "Maximal magnitude: " << magnitude << std::endl;
-    #ifdef LINUX
-    system("read");
-    #else
-    system("pause");
-    #endif
+    std::cout << "End program." << std::endl;
+    std::cout << "Press ENTER to exit.";
+    std::cin.ignore();
+    std::cin.get();
     return 0;
 }
