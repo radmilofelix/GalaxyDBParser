@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1778138764 source:d:\seafile\_projects-s\galaxydbparser\sources\galaxydbparser.cpp
+1778140483 source:d:\seafile\_projects-s\galaxydbparser\sources\galaxydbparser.cpp
 	<iostream>
 	<fstream>
 	<sstream>
