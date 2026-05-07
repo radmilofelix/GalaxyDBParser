@@ -28,7 +28,7 @@ At the bottom of the page, change “**_Output as_**” from “**_plain HTML_**
 ![HL_Index_2.png](Images/HL_Index_2.png)
 You will be asked to save a text file (**HyperLeda\_a000\_nnnnnnnnnn.txt**), this is the file having the objects in the database within the selected radius and around the selected position. The columns of the file are delimited with semicolons. Save the file.
 
-Go to the location of the GalaxyDBParser program and run it with the path of the formerly saved file as the first commandline parameter and the desired diameter of the circle that will mark the object in the annotated image as the second parameter.
+Go to the location of the GalaxyDBParser program and run it with the path of the formerly saved file as the first commandline parameter, the file name as second parameter and the desired diameter of the circle that will mark the object in the annotated image as the third parameter.
 If there are few objects in the image you can use a bigger value for the diameter (1, 1.5), but if there are many objects use a smaller value to avoid overlapping.
 
 _.\GalaxyDBParser.exe D:\Downloads\HyperLeda_a000_1774489569.txt 0.6_
@@ -36,6 +36,8 @@ _.\GalaxyDBParser.exe D:\Downloads\HyperLeda_a000_1774489569.txt 0.6_
 The program has added 235 objects into the output file.
 
 The program keeps only the galaxies in the database, discards the other objects and generates the output file: galaxy_data.csv which can be used by the annotate script in PixInsight.
+
+As of version 1.1, the magnitude of the selected objects can be limited so that only what is visible in the image gets annotated, based on the maximal magnitude that can be found in the image.
 
 Start PixInsight and launch the **_AnnotateImage_** script.
 ![AnnotateScript.png](Images/AnnotateScript.png)
