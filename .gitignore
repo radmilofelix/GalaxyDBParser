@@ -1,9 +1,5 @@
 *.o
 *.exe
-*.cbp
-*.depend
-*.layout
-
 _work
 Documents/
 ReleasesPublished/
