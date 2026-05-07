@@ -39,7 +39,7 @@ The program keeps only the galaxies in the database, discards the other objects 
 
 As of version 1.1, the magnitude of the selected objects can be limited so that only what is visible in the image gets annotated, based on the maximal magnitude that can be found in the image.
 To do this, run the program without parameters, ignore the message that there are insufficient arguments in the commandline and answer "y" to continue running the program and input the necessary data. The program will ask for the path to the database file saved fom the HyperLeda site, the file name itself, the diameter of the object circles that will be drawn around the objects and, finally, the magnitude limit for the objects in the database. If you do not wish to limit the magnitude, input "_999_" to the last data request.
-![OutputWinNoArguments.png](Images\OutputWinNoArguments.png)
+![OutputWinNoArguments.png](Images/OutputWinNoArguments.png)
 Now you can use the output file (galaxy_data.csv) in PixInsight.
 
 Start PixInsight and launch the **_AnnotateImage_** script.
