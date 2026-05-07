@@ -41,7 +41,7 @@ To do this, run the program without parameters, ignore the message that there ar
 With magnitude limited to 20, there will be 120 objects in the output file.
 Now you can use the output file (galaxy_data.csv) in PixInsight.
 
-Start PixInsight and launch the **_AnnotateImage_** script.
+Start PixInsight, open your image and launch the **_AnnotateImage_** script.
 ![AnnotateScript.png](Images/AnnotateScript.png)
 
 Leave the **_Messier_**, _**NGC-IC**_ and **_PGC_** layers active. Click on the green "**_+_**" to add a custom layer.
