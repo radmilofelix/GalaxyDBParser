@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <iomanip>
 
+//#define LINUX
+
 // Trims blank spaces from both ends of a string
 std::string trim(const std::string& s)
 {
@@ -44,7 +46,7 @@ int main(int argc, char* argv[])
     if (argc < 3 )
     {
         std::cout << "Insufficient number of arguments in the commandline." << std::endl;
-        std::cout << "Do you want to continue? <y/n>." << std::endl;
+        std::cout << "Do you want to continue and input the necessary data? <y/n>." << std::endl;
 		char response;
 		response = std::cin.get();
 		if (response == 'y' || response == 'Y')
@@ -70,6 +72,11 @@ int main(int argc, char* argv[])
 		else
 		{
 			std::cout << "End program." << std::endl;
+            #ifdef LINUX
+            system("read");
+            #else
+			system("pause");
+			#endif
 			return 1;
 		}
     }
@@ -161,5 +168,10 @@ int main(int argc, char* argv[])
     std::cout << "Circle diameter: " << diameter << std::endl;
     if ( magnitude < 999 )
         std::cout << "Maximal magnitude: " << magnitude << std::endl;
+    #ifdef LINUX
+    system("read");
+    #else
+    system("pause");
+    #endif
     return 0;
 }
